@@ -33,6 +33,10 @@ impl PciAddress {
         PciAddress(result)
     }
 
+    pub fn as_u32(&self) -> u32 {
+        self.0
+    }
+    
     pub fn segment(&self) -> u16 {
         self.0.get_bits(16..32) as u16
     }
